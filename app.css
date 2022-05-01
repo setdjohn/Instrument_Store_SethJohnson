@@ -1,0 +1,58 @@
+#store{
+    background-color: #ffd700;
+}
+.store{
+    display: flex;
+    flex-wrap: wrap;
+}
+h1{
+    padding: 5px;
+    text-align: center;
+    border: 3px white;
+    background-color: #d4af37;
+}
+.card{
+    position: static;
+    height: 500px;
+    width: 400px;
+    padding: 15px;
+    border: white;
+    background-color: #d4af37;
+    margin-left: auto;
+    overflow: hidden;
+    margin-right: auto;
+    margin-top: 10px;
+    justify-content: center;
+    text-color: white;
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 16px;
+}
+
+img{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.totalCart{
+
+    padding-left: auto;
+    float: right;
+}
+.totalItems{
+    padding-left: auto;
+    float: right;
+}
+.Fender:hover{
+    color: white;
+    background-color: red;
+}
+.Yamaha:hover{
+    color: white;
+    background-color: green;
+}
+.Maton:hover{
+    color: white;
+    background-color: blue;
+}
+.addButton:hover{
+    background-color: #f5d142;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instrument Store</title>
+    <link rel ="stylesheet" href="app.css">
+
+
+</head>
+<body>
+
+
+<div id="store">
+    <h1>Instrument Store</h1>
+    <button v-on:click="emptyCart()">Empty My Cart</button>
+    <button v-on:click="display()">Add New Item</button>
+    <div v-if="addForm">
+        <div class="form" v-if="addForm">
+            <input type="text" v-model="nameInput" placeholder="Instrument Name" />
+            <input type="text" v-model="typeInput" placeholder="Instrument Type" />
+            <input type="radio" v-model="brandInput" id="one" value="Fender" />
+            <label for="one">Fender</label>
+            <input type="radio" v-model="brandInput" id="two" value="Yamaha" />
+            <label for="two">Yamaha</label>
+            <input type="radio" v-model="brandInput" id="three" value="Maton" />
+            <label for="three">Maton</label>
+            <button v-on:click="addNewItem()">Add Item</button>
+        </div>
+
+    </div>
+
+    <br>
+    <span class="totalCart">Total Items in Cart: {{cart.length}}</span><br>
+    <span class="totalItems">Total Items in Store: {{card.length}}</span>
+    <h2 v-if="card.length == 0">Sorry, the store is empty</h2>
+    <br>
+    <div class="store">
+        <div class="card" v-for="(card,index) in card" v-bind:class="card.brand">
+            <img v-bind:src="card.img"></img>
+            <div>{{card.name}}</div>
+            <div>{{card.brand}}</div>
+            <div>{{card.type}}</div>
+            <div>{{card.price}}</div>
+            <button v-on:click="addCart(index)">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <center>Copyright &copy; Seth Johnson</center>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
